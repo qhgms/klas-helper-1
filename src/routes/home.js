@@ -276,7 +276,7 @@ export default () => {
       // 내용 생성 함수
       const createContent = (name, info) => {
         if (info.remainingTime === Infinity) {
-          return `<span style="color: green">남아있는 ${name}가 없습니다!</span>`;
+          return `<span style="color: green">남아있는 ${name}가 없습니다롱!</span>`;
         }
 
         const remainingDay = Math.floor(info.remainingTime / 24);
@@ -284,17 +284,17 @@ export default () => {
 
         if (remainingDay === 0) {
           if (remainingHour === 0) {
-            return `<span style="color: red; font-weight: bold">${info.totalCount}개의 ${name} 중 ${info.remainingCount}개가 곧 마감입니다. 😱</span>`;
+            return `<span style="color: red; font-weight: bold">${info.totalCount}개의 ${name} 중 ${info.remainingCount}개가 곧 마감입니다롱. 😱</span>`;
           }
           else {
-            return `<span style="color: red; font-weight: bolder">${info.totalCount}개의 ${name} 중 <strong>${info.remainingCount}개</strong>가 <strong>${remainingHour}시간 후</strong> 마감입니다. 😭</span>`;
+            return `<span style="color: red; font-weight: bolder">${info.totalCount}개의 ${name} 중 <strong>${info.remainingCount}개</strong>가 <strong>${remainingHour}시간 후</strong> 마감입니다롱. 😭</span>`;
           }
         }
         else if (remainingDay === 1) {
-          return `<span style="color: red">${info.totalCount}개의 ${name} 중 <strong>${info.remainingCount}개</strong>가 <strong>1일 후</strong> 마감입니다. 😥</span>`;
+          return `<span style="color: red">${info.totalCount}개의 ${name} 중 <strong>${info.remainingCount}개</strong>가 <strong>1일 후</strong> 마감입니다롱. 😥</span>`;
         }
         else {
-          return `<span>${info.totalCount}개의 ${name} 중 <strong>${info.remainingCount}개</strong>가 <strong>${remainingDay}일 후</strong> 마감입니다.</span>`;
+          return `<span>${info.totalCount}개의 ${name} 중 <strong>${info.remainingCount}개</strong>가 <strong>${remainingDay}일 후</strong> 마감입니다롱.</span>`;
         }
       };
 
